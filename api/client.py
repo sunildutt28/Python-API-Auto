@@ -36,3 +36,9 @@ class APIClient:
         logger.info(f"DELETE {url}")
         response = requests.delete(url, **kwargs)
         return response
+
+    def patch(self, endpoint, **kwargs):
+        url = f"{BASE_URL}{endpoint}"
+        logger.info(f"PATCH {url}")
+        response = requests.patch(url, **kwargs)
+        return response
